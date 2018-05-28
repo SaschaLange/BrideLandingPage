@@ -19,13 +19,27 @@
 	</head>
 	<body>
 		<!-- Navbar Header -->
-		<nav class="navbar navbar-default navbar-static-top white">
-		  <div class="container-fluid ">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header m-4">
-		      <h2>Bridge.io</h2>
-		    </div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
+		<nav class="navbar navbar-expand-lg navbar-light navbar-static-top white">
+		  <a class="navbar-brand" href="#">Bridge.io</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#faq">FAQ <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#prototyp">Protoyp</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#mail">Mail</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link disabled" href="#">Disabled</a>
+		      </li>
+		    </ul>
+		  </div>
 		</nav>
 
 
@@ -81,7 +95,7 @@
 		</div>
 
 		<!-- FAQ Section -->
-		<div class="container-fluid white p-5" align="center">
+		<div id="faq" class="container-fluid white p-5" align="center">
 
 			<div class="row justify-content-center">
 				<div class="col-10 m-4">
@@ -137,7 +151,7 @@
 		</div>
 
 		<!-- Mockup Section -->
-		<div class="container-fluid dark-blue-accent background-gradient2 p-5" align="center">
+		<div id="prototyp" class="container-fluid dark-blue-accent background-gradient2 p-5" align="center">
 			<div class="row justify-content-center"></div>
 				<div class="col-md-10 m-4">
 					<h1>Prototyp</h2>
@@ -159,7 +173,7 @@
 
 
 		<!-- Mailers -->
-		<div class="container-fluid light-blue-accent p-5">
+		<div id="mail" class="container-fluid light-blue-accent p-5">
 			<div class="row justify-content-center">
 				<div class="col-md-6 m-4" align="center">
 					<h1>What would you do with Bridge.io?</h1>
