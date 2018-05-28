@@ -1,0 +1,37 @@
+.dark-grey {
+  background-color: #636363 !important;
+}
+
+.mid-grey {
+  background-color: #b0b0b0 !important;
+}
+
+.light-grey {
+  background-color: #e3e3e3 !important;
+}
+
+.light-blue-accent {
+  background-color: #6ecde8 !important;
+}
+
+.dark-blue-accent {
+  background-color: #045c75 !important;
+}
+
+
+.background-gradient1 {
+  background-image: linear-gradient(to bottom, #6ecde8, #9bd0ee, #bed4ed, #d6dae8, #e3e3e3); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.background-gradient2 {
+  background-image: linear-gradient(to top, #6ecde8, #9bd0ee, #bed4ed, #d6dae8, #e3e3e3);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
