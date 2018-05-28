@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<!-- Navbar Header -->
-		<nav class="navbar navbar-default navbar-static-top light-blue-accent">
+		<nav class="navbar navbar-default navbar-static-top white">
 		  <div class="container-fluid ">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header m-4">
@@ -81,7 +81,7 @@
 		</div>
 
 		<!-- FAQ Section -->
-		<div class="container-fluid light-grey p-5" align="center">
+		<div class="container-fluid white p-5" align="center">
 
 			<div class="row justify-content-center">
 				<div class="col-10 m-4">
@@ -183,11 +183,11 @@
 			</div>	
 		</div>
 	</div>
-	<nav class="navbar navbar-default navbar-static-bottom dark-grey">
+	<nav class="navbar navbar-default navbar-static-bottom white">
 		  <div class="container-fluid p-1">
 		    <div class="navbar-header m-4">
-		      <h2 class="text-white">Bridge.io</h2>
-		      <p class="text-white">Marvin Reinhart and Sascha Lange</p>
+		      <h2>Bridge.io</h2>
+		      <p>Marvin Reinhart and Sascha Lange</p>
 		  </div>
 		</nav>
 	</body>
