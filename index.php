@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/colors.css"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -13,11 +13,9 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-
-
 	</head>
 	<body>
+
 		<!-- Navbar Header -->
 		<nav class="navbar navbar-expand-lg navbar-light navbar-static-top white">
 		  <a class="navbar-brand" href="#">Bridge.io</a>
@@ -27,7 +25,10 @@
 		  <div class="collapse navbar-collapse" id="navbarNav">
 		    <ul class="navbar-nav">
 		      <li class="nav-item active">
-		        <a class="nav-link" href="#faq">FAQ <span class="sr-only">(current)</span></a>
+		        <a class="nav-link" href="#apps">Apps</a>
+		      </li>	
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#faq">FAQ</a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link" href="#prototyp">Protoyp</a>
@@ -35,16 +36,15 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="#mail">Mail</a>
 		      </li>
-		      <li class="nav-item">
+		      <!-- <li class="nav-item">
 		        <a class="nav-link disabled" href="#">Disabled</a>
-		      </li>
+		      </li> -->
 		    </ul>
 		  </div>
 		</nav>
 
-
 		<!-- Head Section -->
-		<div class="container-fluid background-gradient1 p-5">
+		<div id="home" class="container-fluid background-gradient1 p-5">
 			<div class="row justify-content-center">
 				<div class="col-md-5 m-4">
 					<h1>Bridge.io</h1>
@@ -59,37 +59,59 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 				</div>
 			</div>
-			<br>
-			<!-- app card -->
-			<div class="row justify-content-center m-5" align="center">
-				<!-- <div class="card w-auto">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-					</div>
-				</div> -->
-			</div>
-			<!-- app icons -->
+		</div>
+
+		<!-- Supported apps -->
+		<div id="apps" class="container-fluid p-5">
 			<div class="row justify-content-center" align="center">
-				<div class="col-xs-4 mx-2">
-					<img src="https://cdn.zapier.com/storage/services/0f5a0d7ee18ced262570a8c831e1a04a.128x128.png" class="img-fluid">
+				<div class="col-md-8">
+					<h1>Supported Apps</h1>
+					<br>
+					<p>Combine your most used specialized software to streamline your workflow.</p>
 				</div>
-				<div class="col-xs-4 mx-2">
-					<img src="https://cdn.zapier.com/storage/services/62c82a7958c6c29736f17d0495b6635c.128x128.png" class="img-fluid">
+			</div>
+			<div class="row justify-content-center mt-5" align="center">
+				<div class="col-xs-4 mr-4">
+					<figure class="figure">
+						<img src="https://cdn.zapier.com/storage/services/0f5a0d7ee18ced262570a8c831e1a04a.64x64.png" class="img-fluid">
+						<figcaption class="figure-caption text-center">Gmail</figcaption>
+					</figure>
 				</div>
-				<div class="col-xs-4 mx-2">
-					<img src="https://cdn.zapier.com/storage/services/bb735e567f1a1e9e3b8b7241497c2d43.128x128.png" class="img-fluid">
+				<div class="col-xs-4 mr-4">
+					<figure class="figure">
+						<img src="https://cdn.zapier.com/storage/services/62c82a7958c6c29736f17d0495b6635c.64x64.png" class="img-fluid">
+						<figcaption class="figure-caption text-center">Google Calendar</figcaption>
+					</figure>
 				</div>
-				<div class="col-xs-4 mx-2">
-					<img src="https://cdn.zapier.com/storage/developer/57b336375384ab62cc06e7e83d5c3622_2.128x128.png" class="img-fluid">
+				<div class="col-xs-4 mr-4">
+					<figure class="figure">
+						<img src="https://cdn.zapier.com/storage/services/bb735e567f1a1e9e3b8b7241497c2d43.64x64.png" class="img-fluid">
+						<figcaption class="figure-caption text-center">Google Drive</figcaption>
+					</figure>
 				</div>
-				<div class="col-xs-4 mx-2">
-					<img src="https://cdn.zapier.com/storage/services/5a67ba06cd2c1c87baadac29145f18a2.128x128.png" class="img-fluid">
+				<div class="col-xs-4 mr-4">
+					<figure class="figure">
+						<img src="https://cdn.zapier.com/storage/developer/57b336375384ab62cc06e7e83d5c3622_2.64x64.png" class="img-fluid">
+						<figcaption class="figure-caption text-center">Slack</figcaption>
+					</figure>
 				</div>
-				<div class="col-xs-4 mx-2">
-					<img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" class="img-fluid">
+				<div class="col-xs-4 mr-4">
+					<figure class="figure">
+						<img src="https://cdn.zapier.com/storage/services/5a67ba06cd2c1c87baadac29145f18a2.64x64.png" class="img-fluid">
+						<figcaption class="figure-caption text-center">Github</figcaption>
+					</figure>
 				</div>
-				<div class="col-xs-4 mx-2">
-					<img src="https://cdn.zapier.com/storage/developer/ea4a5ee38c7a088e243745dd0b851784.128x128.png" class="img-fluid">
+				<div class="col-xs-4 mr-4">
+					<figure class="figure">
+						<img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.64x64.png" class="img-fluid">
+						<figcaption class="figure-caption text-center">Asana</figcaption>
+					</figure>
+				</div>
+				<div class="col-xs-4 mr-4">
+					<figure class="figure">
+						<img src="https://cdn.zapier.com/storage/developer/ea4a5ee38c7a088e243745dd0b851784.64x64.png" class="img-fluid">
+						<figcaption class="figure-caption text-center">Jira</figcaption>
+					</figure>
 				</div>
 			</div>
 		</div>
@@ -171,37 +193,64 @@
 			</div>
 		</div>
 
-
 		<!-- Mailers -->
 		<div id="mail" class="container-fluid light-blue-accent p-5">
 			<div class="row justify-content-center">
 				<div class="col-md-6 m-4" align="center">
 					<h1>What would you do with Bridge.io?</h1>
-					<h3>Tell us:</h3>
+					<h3 class="text-white">Tell us:</h3>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-6 m-4" align="center">
 				<!-- Mail Form -->
-				<form id="signup-form" method="post" action="assets/php/subscribe.php" onsubmit="return valid(0)">
-				  <div class="form-group">
-				    <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" onblur="validEmail(0)" required>
-				  </div>
-				  <div class="form-check">
-				    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-				    <label class="form-check-label" for="exampleCheck1">I consent to stuff!</label>
-				  </div>
-				  <br>
-				  <input type="submit" name="submit" class="btn" value="Sign Up"></input>
-				</form>
-			</div>	
+					<form id="signup-form" method="post" action="assets/php/subscribe.php" onsubmit="return valid(0)">
+					  <div class="form-group">
+					    <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" onblur="validEmail(0)" required>
+					  </div>
+					  <div class="form-check">
+					    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+					    <label class="form-check-label text-muted" for="exampleCheck1">I consent to stuff!</label>
+					  </div>
+					  <br>
+					  <input type="submit" name="submit" class="btn text-muted" value="Sign Up"></input>
+					</form>
+				</div>	
+			</div>
 		</div>
-	</div>
-	<nav class="navbar navbar-default navbar-static-bottom white">
-		  <div class="container-fluid p-1">
-		    <div class="navbar-header m-4">
-		      <h2>Bridge.io</h2>
-		      <p>Marvin Reinhart and Sascha Lange</p>
-		  </div>
-		</nav>
+
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<div class="row text-center text-xs-center text-sm-left text-md-left">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<h5>Quick links</h5>
+						<ul class="list-unstyled quick-links">
+							<li><a href="">Home</a></li>
+							<li><a href="#faq">FAQ</a></li>
+							<li><a href="">About</a></li>
+							<li><a href="javascript:void();"></i>Impressum</a></li>
+							<li><a href="javascript:void();"></i>Jobs</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<h5>Quick links</h5>
+						<ul class="list-unstyled quick-links">
+							<li><a href="">Home</a></li>
+							<li><a href="#faq">FAQ</a></li>
+							<li><a href="">About</a></li>
+							<li><a href="javascript:void();"></i>Impressum</a></li>
+							<li><a href="javascript:void();"></i>Jobs</a></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<div class="row text-center justify-content-center">
+					<div class="col-xs-12 col-sm-8 col-md-8 mt-2 mt-sm-2 text-center text-white">
+						<p>Geschäftsführung: Marvin Reinhart & Sascha Lange</p>
+						<p class="h6">Bridge.io &copy 2018 All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"></a></p>	
+					</div>
+				</div>
+			</div>
+		</section>
 	</body>
