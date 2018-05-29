@@ -48,7 +48,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-5 m-4">
 					<h1>Bridge.io</h1>
-					<h3>smart plattform</h3>
+					<h3>Konnektivität der Zukunft</h3>
 				</div>
 				<div class="col-md-5 m-4">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -59,6 +59,7 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 				</div>
 			</div>
+			
 		</div>
 
 		<!-- Supported apps -->
@@ -173,47 +174,67 @@
 		</div>
 
 		<!-- Mockup Section -->
-		<div id="prototyp" class="container-fluid dark-blue-accent background-gradient2 p-5" align="center">
-			<div class="row justify-content-center"></div>
-				<div class="col-md-10 m-4">
-					<h1>Prototyp</h2>
+		<div id="prototyp" class="container-fluid background-gradient2" align="center">
+			<div class="row justify-content-center pt-4">
+				<div class="col-md-10">
+					<h1>The Future Is Now!</h2>
 				</div>
-			<div class="row align-items-center">
-				<div class="col-lg-5 m-4 ">
-					<img src="assets/images/browser.png" class="img-fluid" alt="Responsive image">
+			</div>
+			<div class="row justify-content-center pb-4">
+				<div class="col-md-10 col-lg-8">
+					<div id="screen">
+                        <div id="menubar">
+                            <div class="mac-btn" id="mac-btn-one"></div>
+                            <div class="mac-btn" id="mac-btn-two"></div>
+                            <div class="mac-btn" id="mac-btn-three"></div>
+                        </div>
+                        <div id="filler">
+                            <div id="profiler"></div>
+                            <div id="main">
+                                <h4>Wilkommen bei Bridge.io!</h4>
+                                <p>Welche Online-Tools verwendest du?</p>
+                            </div>
+                        </div>
+                	</div>
 				</div>
-				<div class="col-md-5 m-4">
+				<!-- <div class="col-md-5 m-4">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
 		<!-- Mailers -->
 		<div id="mail" class="container-fluid light-blue-accent p-5">
-			<div class="row justify-content-center">
+			<div class="row justify-content-center mt-5">
 				<div class="col-md-6 m-4" align="center">
-					<h1>What would you do with Bridge.io?</h1>
-					<h3 class="text-white">Tell us:</h3>
+					<h1>Was würdest du mit Bridge erreichen?</h1>
+					<!-- <h3 class="text-white">Tell us:</h3> -->
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-6 m-4" align="center">
 				<!-- Mail Form -->
 					<form id="signup-form" method="post" action="assets/php/subscribe.php" onsubmit="return valid(0)">
+
 					  <div class="form-group">
-					    <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" onblur="validEmail(0)" required>
+					    <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="Deine Emailadresse..." onblur="validEmail(0)" required>
 					  </div>
+
+					  <div class="form-group">
+						<textarea class="form-control" id="nachricht" placeholder="Deine Wünsche ..." rows="6"></textarea>
+					  </div>
+
 					  <div class="form-check">
 					    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 					    <label class="form-check-label text-muted" for="exampleCheck1">I consent to stuff!</label>
 					  </div>
 					  <br>
-					  <input type="submit" name="submit" class="btn text-muted" value="Sign Up"></input>
+					  <input type="submit" name="submit" class="btn text-muted" value="Senden"></input>
 					</form>
 				</div>	
 			</div>
@@ -247,8 +268,7 @@
 				<br>
 				<div class="row text-center justify-content-center">
 					<div class="col-xs-12 col-sm-8 col-md-8 mt-2 mt-sm-2 text-center text-white">
-						<p>Geschäftsführung: Marvin Reinhart & Sascha Lange</p>
-						<p class="h6">Bridge.io &copy 2018 All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"></a></p>	
+						<p class="h6">Bridge.io &copy 2018 | Marvin Reinhart & Sascha Lange | Made with ♥<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"></a></p>	
 					</div>
 				</div>
 			</div>
