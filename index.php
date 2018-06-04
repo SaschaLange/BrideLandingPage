@@ -6,20 +6,47 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<!-- Custom CSS -->
 		<link rel="stylesheet" href="assets/css/colors.css"/>
+		<link rel="stylesheet" href="assets/css/custom.css"/>
+		<!-- Bootstrap and Fontawesome CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
+		<style type="text/css">
+            /* Set a size for our map container, the Google Map will take up 100% of this container */
+            #map {
+                width: auto;
+                height: 250px;
+            }
+        </style>
+
+        <!-- jquery, popper and bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<!-- Google Maps Integration -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+		<script type="text/javascript" src="assets/js/maps.js"></script>
+        
+        <script>
+            function dim(bool)
+            {
+                if (typeof bool=='undefined') bool=true; // so you can shorten dim(true) to dim()
+                document.getElementById('dimmer').style.display=(bool?'block':'none');
+            }    
+            
+            dim(true);
+            dim(false);
+        </script>
+
 	</head>
 	<body>
 
 		<!-- Navbar Header -->
 		<nav class="navbar navbar-expand-lg navbar-light navbar-static-top white">
 		  <a class="navbar-brand" href="#">Bridge.io</a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,209 +63,390 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="#mail">Mail</a>
 		      </li>
-		      <!-- <li class="nav-item">
-		        <a class="nav-link disabled" href="#">Disabled</a>
-		      </li> -->
 		    </ul>
-		  </div>
+		  </div> -->
 		</nav>
 
 		<!-- Head Section -->
-		<div id="home" class="container-fluid background-gradient1 p-5">
-			<div class="row justify-content-center">
-				<div class="col-md-5 m-4">
-					<h1>Bridge.io</h1>
-					<h3>Konnektivität der Zukunft</h3>
-				</div>
-				<div class="col-md-5 m-4">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+		<section class="background-gradient1">
+			<div id="home" class="container-fluid p-5">
+				<div class="row justify-content-center">
+					<div class="col-md-5 m-4">
+						<h1>Bridge.io</h1>
+						<h3>Konnektivität der Zukunft</h3>
+					</div>
+					<div class="col-md-5 m-4">
+					</div>
 				</div>
 			</div>
-			
-		</div>
+		</section>
 
 		<!-- Supported apps -->
-		<div id="apps" class="container-fluid p-5">
-			<div class="row justify-content-center" align="center">
-				<div class="col-md-8">
-					<h1>Supported Apps</h1>
-					<br>
-					<p>Combine your most used specialized software to streamline your workflow.</p>
-				</div>
-			</div>
-			<div class="row justify-content-center mt-5" align="center">
-				<div class="col-xs-4 mr-4">
-					<figure class="figure">
-						<img src="https://cdn.zapier.com/storage/services/0f5a0d7ee18ced262570a8c831e1a04a.64x64.png" class="img-fluid">
-						<figcaption class="figure-caption text-center">Gmail</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-4 mr-4">
-					<figure class="figure">
-						<img src="https://cdn.zapier.com/storage/services/62c82a7958c6c29736f17d0495b6635c.64x64.png" class="img-fluid">
-						<figcaption class="figure-caption text-center">Google Calendar</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-4 mr-4">
-					<figure class="figure">
-						<img src="https://cdn.zapier.com/storage/services/bb735e567f1a1e9e3b8b7241497c2d43.64x64.png" class="img-fluid">
-						<figcaption class="figure-caption text-center">Google Drive</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-4 mr-4">
-					<figure class="figure">
-						<img src="https://cdn.zapier.com/storage/developer/57b336375384ab62cc06e7e83d5c3622_2.64x64.png" class="img-fluid">
-						<figcaption class="figure-caption text-center">Slack</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-4 mr-4">
-					<figure class="figure">
-						<img src="https://cdn.zapier.com/storage/services/5a67ba06cd2c1c87baadac29145f18a2.64x64.png" class="img-fluid">
-						<figcaption class="figure-caption text-center">Github</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-4 mr-4">
-					<figure class="figure">
-						<img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.64x64.png" class="img-fluid">
-						<figcaption class="figure-caption text-center">Asana</figcaption>
-					</figure>
-				</div>
-				<div class="col-xs-4 mr-4">
-					<figure class="figure">
-						<img src="https://cdn.zapier.com/storage/developer/ea4a5ee38c7a088e243745dd0b851784.64x64.png" class="img-fluid">
-						<figcaption class="figure-caption text-center">Jira</figcaption>
-					</figure>
-				</div>
-			</div>
-		</div>
-
-		<!-- FAQ Section -->
-		<div id="faq" class="container-fluid white p-5" align="center">
-
-			<div class="row justify-content-center">
-				<div class="col-10 m-4">
-					<h1>FAQ</h1>
-					<br>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-				</div>
-			</div>
-
-			<div class="row justify-content-center align-items-center">
-				<!-- Card 1 -->
-				<div class="col-lg-3 m-4">
-					<div class="card w-auto">
-					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-					    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-					  </div>
-					</div>
-				</div>
-				<!-- Card 2 -->
-				<div class="col-lg-3 m-4">
-					<div class="card w-auto">
-					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-					    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-					  </div>
-					</div>
-				</div>
-				<!-- Card 3 -->
-				<div class="col-lg-3 m-4">
-					<div class="card w-auto">
-					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-					    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-					  </div>
+		<section>
+			<div id="apps" class="container-fluid pt-5">
+				<div class="row justify-content-center">
+					<div class="col-10">
+						<h1>Verknüpfe deine Software Tools mit Bridge</h1>
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.s</p>
 					</div>
 				</div>
 			</div>
-		</div>
+			<div class="container-fluid pt-5">
+				<div class="row justify-content-center">
+					<div class="col-10">
+						<!-- App Icon Row -->
+						<div class="row justify-content-center" align="center">
+							<div class="col-xs-4 mr-4">
+								<figure class="figure">
+									<img src="https://cdn.zapier.com/storage/services/0f5a0d7ee18ced262570a8c831e1a04a.64x64.png" class="img-fluid">
+									<figcaption class="figure-caption text-center">Gmail</figcaption>
+								</figure>
+							</div>
+							<div class="col-xs-4 mr-4">
+								<figure class="figure">
+									<img src="https://cdn.zapier.com/storage/services/62c82a7958c6c29736f17d0495b6635c.64x64.png" class="img-fluid">
+									<figcaption class="figure-caption text-center">Google Calendar</figcaption>
+								</figure>
+							</div>
+							<div class="col-xs-4 mr-4">
+								<figure class="figure">
+									<img src="https://cdn.zapier.com/storage/services/bb735e567f1a1e9e3b8b7241497c2d43.64x64.png" class="img-fluid">
+									<figcaption class="figure-caption text-center">Google Drive</figcaption>
+								</figure>
+							</div>
+							<div class="col-xs-4 mr-4">
+								<figure class="figure">
+									<img src="https://cdn.zapier.com/storage/developer/57b336375384ab62cc06e7e83d5c3622_2.64x64.png" class="img-fluid">
+									<figcaption class="figure-caption text-center">Slack</figcaption>
+								</figure>
+							</div>
+							<div class="col-xs-4 mr-4">
+								<figure class="figure">
+									<img src="https://cdn.zapier.com/storage/services/5a67ba06cd2c1c87baadac29145f18a2.64x64.png" class="img-fluid">
+									<figcaption class="figure-caption text-center">Github</figcaption>
+								</figure>
+							</div>
+							<div class="col-xs-4 mr-4">
+								<figure class="figure">
+									<img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.64x64.png" class="img-fluid">
+									<figcaption class="figure-caption text-center">Asana</figcaption>
+								</figure>
+							</div>
+							<div class="col-xs-4 mr-4">
+								<figure class="figure">
+									<img src="https://cdn.zapier.com/storage/developer/ea4a5ee38c7a088e243745dd0b851784.64x64.png" class="img-fluid">
+									<figcaption class="figure-caption text-center">Jira</figcaption>
+								</figure>
+							</div>
+						</div>
+						<!--  -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Info Section -->
+		<section>
+			<div id="info" class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-10">
+						<h1>Was ist Bridge?</h1>
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+					</div>
+				</div>
+
+				<div class="row justify-content-center align-items-center" align="center">
+					<!-- Card 1 -->
+					<div class="col-10 col-lg-3 m-3">
+						<div class="card w-auto">
+						  <div class="card-body">
+						    <h5 class="card-title">Card title</h5>
+						    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+						    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+						  </div>
+						</div>
+					</div>
+					<!-- Card 2 -->
+					<div class="col-10 col-lg-3 m-3">
+						<div class="card w-auto">
+						  <div class="card-body">
+						    <h5 class="card-title">Card title</h5>
+						    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+						    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+						  </div>
+						</div>
+					</div>
+					<!-- Card 3 -->
+					<div class="col-10 col-lg-3 m-3">
+						<div class="card w-auto">
+						  <div class="card-body">
+						    <h5 class="card-title">Card title</h5>
+						    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+						    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- Mockup Section -->
-		<div id="prototyp" class="container-fluid background-gradient2" align="center">
-			<div class="row justify-content-center pt-4">
-				<div class="col-md-10">
-					<h1>The Future Is Now!</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center pb-4">
-				<div class="col-md-10 col-lg-8">
-					<div id="screen">
-                        <div id="menubar">
-                            <div class="mac-btn" id="mac-btn-one"></div>
-                            <div class="mac-btn" id="mac-btn-two"></div>
-                            <div class="mac-btn" id="mac-btn-three"></div>
-                        </div>
-                        <div id="filler">
-                            <div id="profiler"></div>
-                            <div id="main">
-                                <h4>Wilkommen bei Bridge.io!</h4>
-                                <p>Welche Online-Tools verwendest du?</p>
+		<section>
+            <div class="container pb-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="font-family: 'Quicksand', sans-serif; font-size: 50px;" class="text-center">THIS IS AWESOME BRUV</h1>
+                        <div id="screen">
+                            <div id="menubar">
+                                <div class="mac-btn" id="mac-btn-one"></div>
+                                <div class="mac-btn" id="mac-btn-two"></div>
+                                <div class="mac-btn" id="mac-btn-three"></div>
+                            </div>
+                            <!-- Pop Up Dimmer -->
+                            <div id="dimmer" class="pt-4">
+                                <div id="dimmer-content">
+                                    <div class="container" id="dimmer-content-style">
+                                        <div class="row" id="dimmer-content-style">
+                                            <div class="col-md-12" id="dimmer-content-style">
+                                            	<!-- Exitbutton Group -->
+                                            	<div class="row">
+                                            		<div class="col pt-3 pr-3" align="right">
+                                            			<button type="button" class="btn" onclick="$('#dimmer').hide();">X</button>
+                                            		</div>
+                                        		</div>
+                                        		<!-- Infotext Group -->
+                                        		<div class="row">
+                                        			<div class="col-md-8 offset-md-2">
+                                                		<p style="font-family: 'Quicksand';"> <h5>Vielen Dank für das Zusammenstellen deiner Online-Tools!</h5>Bridge befindet sich derzeit noch im Aufbau. Trage hier deine E-Mailadresse ein und wir werden dich auf dem Laufenden halten und dich über den Release der Plattform informieren.<br><br></p>
+                                                	</div>
+                                                </div>
+                                                <!-- Form Group -->
+                                                <div class="row pb-5">
+                                                	<div class="col">
+		                                                <form id="dimmer-content-style">
+		                                                    <div class="form-row">
+		                                                        <div class="form-group col-md-8 offset-md-2">
+		                                                            <input type="email" class="form-control" id="email" placeholder="E-Mail">
+		                                                        </div>
+		                                                    </div>
+		                                                    <div class="form-row">
+		                                                        <div class="form-group col-md-4 offset-md-4">
+		                                                            <input type="submit" class="form-control btn btn-primary" id="senden" value="Jetzt eintragen">
+		                                                        </div>
+		                                                    </div>
+		                                                </form>
+		                                            </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="filler">
+                                <div id="profiler">
+                                    <h4 style="font-family: 'Quicksand', sans-serif;"></h4>
+                                </div>
+
+                                <div style="position: relative; padding-left: 23%; padding-right: 2%; padding-top: 1%;">
+                                    <button class="btn btn-primary float-right" onclick="dim()" data-toggle="modal" data-target="#exampleModalLong">Absenden</button>
+                                    <p style="font-family: 'Quicksand', sans-serif;"><h5>Welche Online-Tools verwendest du?</h5><hr></p>
+                                    <div id="main">
+                                        <ul id="configuratorList" style="z-index: 5;">
+                                            <li>
+                                                <input type="checkbox" id="cb1" />
+                                                <label id="configuratorLabel" for="cb1">
+                                                        <img src="https://cdn.zapier.com/storage/services/0f5a0d7ee18ced262570a8c831e1a04a.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb2" />
+                                                <label id="configuratorLabel" for="cb2">
+                                                    <img src="https://cdn.zapier.com/storage/services/62c82a7958c6c29736f17d0495b6635c.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb3" />
+                                                <label id="configuratorLabel" for="cb3">
+                                                    <img src="https://cdn.zapier.com/storage/services/bb735e567f1a1e9e3b8b7241497c2d43.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb4" />
+                                                <label id="configuratorLabel" for="cb4">
+                                                    <img src="https://cdn.zapier.com/storage/developer/57b336375384ab62cc06e7e83d5c3622_2.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb5" />
+                                                <label id="configuratorLabel" for="cb5">
+                                                    <img src="https://cdn.zapier.com/storage/services/5a67ba06cd2c1c87baadac29145f18a2.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb6" />
+                                                <label id="configuratorLabel" for="cb6">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+
+                                            <li>
+                                                <input type="checkbox" id="cb7" />
+                                                <label id="configuratorLabel" for="cb7">
+                                                        <img src="https://cdn.zapier.com/storage/services/0f5a0d7ee18ced262570a8c831e1a04a.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb8" />
+                                                <label id="configuratorLabel" for="cb8">
+                                                    <img src="https://cdn.zapier.com/storage/services/62c82a7958c6c29736f17d0495b6635c.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb9" />
+                                                <label id="configuratorLabel" for="cb9">
+                                                    <img src="https://cdn.zapier.com/storage/services/bb735e567f1a1e9e3b8b7241497c2d43.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb10" />
+                                                <label id="configuratorLabel" for="cb10">
+                                                    <img src="https://cdn.zapier.com/storage/developer/57b336375384ab62cc06e7e83d5c3622_2.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb11" />
+                                                <label id="configuratorLabel" for="cb11">
+                                                    <img src="https://cdn.zapier.com/storage/services/5a67ba06cd2c1c87baadac29145f18a2.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="cb12" />
+                                                <label id="configuratorLabel" for="cb12">
+                                                    <img src="https://cdn.zapier.com/storage/developer/986718c45d823ca0a4173ec68912416e.128x128.png" />
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                	</div>
-				</div>
-				<!-- <div class="col-md-5 m-4">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-				</div> -->
-			</div>
-		</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 		<!-- Mailers -->
-		<div id="mail" class="container-fluid light-blue-accent p-5">
-			<div class="row justify-content-center mt-5">
-				<div class="col-md-6 m-4" align="center">
-					<h1>Was würdest du mit Bridge erreichen?</h1>
-					<!-- <h3 class="text-white">Tell us:</h3> -->
+		<section class="light-blue-accent">
+			<div id="mail" class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-md-6 m-4" align="center">
+						<h1>Was würdest du mit Bridge erreichen?</h1>
+						<!-- <h3 class="text-white">Tell us:</h3> -->
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-6 m-4" align="center">
+					<!-- Mail Form -->
+						<form id="signup-form" method="post" action="assets/php/subscribe.php" onsubmit="return valid(0)">
+
+						  <div class="form-group">
+						    <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="Deine Emailadresse..." onblur="validEmail(0)" required>
+						  </div>
+
+						  <div class="form-group">
+							<textarea class="form-control" id="nachricht" placeholder="Deine Wünsche ..." rows="6"></textarea>
+						  </div>
+
+						  <div class="form-check">
+						    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						    <label class="form-check-label text-muted" for="exampleCheck1">I consent to stuff!</label>
+						  </div>
+						  <br>
+						  <input type="submit" name="submit" class="btn text-muted" value="Senden"></input>
+						</form>
+					</div>	
 				</div>
 			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-6 m-4" align="center">
-				<!-- Mail Form -->
-					<form id="signup-form" method="post" action="assets/php/subscribe.php" onsubmit="return valid(0)">
-
-					  <div class="form-group">
-					    <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="Deine Emailadresse..." onblur="validEmail(0)" required>
-					  </div>
-
-					  <div class="form-group">
-						<textarea class="form-control" id="nachricht" placeholder="Deine Wünsche ..." rows="6"></textarea>
-					  </div>
-
-					  <div class="form-check">
-					    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-					    <label class="form-check-label text-muted" for="exampleCheck1">I consent to stuff!</label>
-					  </div>
-					  <br>
-					  <input type="submit" name="submit" class="btn text-muted" value="Senden"></input>
-					</form>
-				</div>	
-			</div>
-		</div>
+		</section>
 
 		<!-- Footer -->
 		<section id="footer">
@@ -248,24 +456,18 @@
 						<h5>Quick links</h5>
 						<ul class="list-unstyled quick-links">
 							<li><a href="">Home</a></li>
-							<li><a href="#faq">FAQ</a></li>
+							<li><a href="#info">Info</a></li>
 							<li><a href="">About</a></li>
 							<li><a href="javascript:void();"></i>Impressum</a></li>
 							<li><a href="javascript:void();"></i>Jobs</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-6">
-						<h5>Quick links</h5>
-						<ul class="list-unstyled quick-links">
-							<li><a href="">Home</a></li>
-							<li><a href="#faq">FAQ</a></li>
-							<li><a href="">About</a></li>
-							<li><a href="javascript:void();"></i>Impressum</a></li>
-							<li><a href="javascript:void();"></i>Jobs</a></li>
-						</ul>
+						<div id="map"></div>
 					</div>
 				</div>
-				<br>
+			</div>
+			<div class="container mt-5">
 				<div class="row text-center justify-content-center">
 					<div class="col-xs-12 col-sm-8 col-md-8 mt-2 mt-sm-2 text-center text-white">
 						<p class="h6">Bridge.io &copy 2018 | Marvin Reinhart & Sascha Lange | Made with ♥<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"></a></p>	
